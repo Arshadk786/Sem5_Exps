@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkdata(email){
+            var x = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            if(x.test(myform.email.value)){
+                alert("Email iss verified");
+            }
+            else{
+                alert("You have entered an invalid email address!");
+            }
+
+            var name = document.myform.name.value
+        }
+    </script>
+</head>
+<body>
+    <form action="#" name="myform">
+        Name: <input type="text" name="name" id=""> <br>
+        Address: <textarea name="address" id="" cols="30" rows="10"></textarea> <br>
+        Email Id: <input type="email" name="email" id=""> <br>
+        Contact: <input type="number" name="contact" id=""> <br>
+        DOB: <input type="date" name="dob" id=""> <br>
+        Percentage: <input type="number" name="per" id=""> <br>
+        Branch & Technology Preffered: <input type="checkbox" name="comp" id="" checked>Computer <p><input type="checkbox" name="civil" id=""> Civil</p>
+        <button type="submit" onclick="checkdata(email.value,name.value)">Submit</button>
+    </form>
+</body>
+</html>
